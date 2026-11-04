@@ -86,6 +86,14 @@ export const Navbar: React.FC<NavbarProps> = ({
             Quiz de Fixação
           </button>
           <button
+            onClick={() => setActiveTab('readme')}
+            className={`whitespace-nowrap shrink-0 transition-colors cursor-pointer ${
+              activeTab === 'readme' ? 'text-amber-400 font-semibold' : 'hover:text-white'
+            }`}
+          >
+            README.md
+          </button>
+          <button
             onClick={onOpenHowToRun}
             className="text-slate-400 hover:text-white whitespace-nowrap shrink-0 transition-colors cursor-pointer"
           >

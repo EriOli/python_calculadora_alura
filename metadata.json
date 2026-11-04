@@ -1,6 +1,8 @@
 {
-  "name": "Python CalcLab - Calculadora para Iniciantes",
+  "name": "Python_Calculadora_Alura",
   "description": "Aprenda a criar uma calculadora em Python do zero com código comentado, explicações de funções, simulador interativo de terminal e conceitos fundamentais.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }

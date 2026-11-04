@@ -10,8 +10,9 @@ import { TerminalSimulator } from './components/TerminalSimulator';
 import { CodeAnatomy } from './components/CodeAnatomy';
 import { VisualCalculator } from './components/VisualCalculator';
 import { KnowledgeQuiz } from './components/KnowledgeQuiz';
+import { ReadmeViewer } from './components/ReadmeViewer';
 import { HowToRunModal } from './components/HowToRunModal';
-import { Terminal, Code, Cpu, Sparkles, BookOpen, CheckCircle, ArrowRight } from 'lucide-react';
+import { Terminal, Code, Cpu, Sparkles, BookOpen, CheckCircle, ArrowRight, FileText } from 'lucide-react';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<string>('codigo');
@@ -133,6 +134,18 @@ export default function App() {
               <Sparkles className="w-4 h-4" />
               <span>Quiz de Fixação</span>
             </button>
+
+            <button
+              onClick={() => setActiveTab('readme')}
+              className={`flex items-center gap-2 px-4 py-2.5 text-xs sm:text-sm font-semibold rounded-lg transition-all cursor-pointer whitespace-nowrap shrink-0 ${
+                activeTab === 'readme'
+                  ? 'bg-amber-400 text-slate-950 shadow-sm'
+                  : 'bg-slate-900 text-slate-400 hover:text-white hover:bg-slate-800'
+              }`}
+            >
+              <FileText className="w-4 h-4" />
+              <span>README.md</span>
+            </button>
           </div>
         </div>
       </section>
@@ -155,6 +168,13 @@ export default function App() {
         {activeTab === 'calculadora-visual' && <VisualCalculator />}
 
         {activeTab === 'quiz' && <KnowledgeQuiz />}
+
+        {activeTab === 'readme' && (
+          <ReadmeViewer
+            onGoToCode={() => setActiveTab('codigo')}
+            onGoToTerminal={() => setActiveTab('simulador')}
+          />
+        )}
       </main>
 
       {/* Footer */}
