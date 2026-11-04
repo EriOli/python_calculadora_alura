@@ -1,0 +1,6 @@
+{
+  "name": "Python CalcLab - Calculadora para Iniciantes",
+  "description": "Aprenda a criar uma calculadora em Python do zero com código comentado, explicações de funções, simulador interativo de terminal e conceitos fundamentais.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
